@@ -12,7 +12,7 @@ class RecipeList extends React.Component {
     };
   }
 
-  componentDidMount = async () => {
+  async componentDidMount() {
     const apiKey = process.env.REACT_APP_API_KEY;
     const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=pasta`)
       .then(res => res.json())

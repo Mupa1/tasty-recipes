@@ -11,7 +11,7 @@ class RecipeDetails extends React.Component {
     };
   }
 
-  componentDidMount = async () => {
+  async componentDidMount() {
     const { match } = this.props;
     const apiKey = process.env.REACT_APP_API_KEY;
     const id = match.params.recipe_id;
