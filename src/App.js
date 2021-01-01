@@ -1,14 +1,17 @@
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import RecipeList from './containers/RecipeList';
+import Navbar from './components/Navbar';
 
-function App() {
-  return (
+const App = () => (
+  <BrowserRouter>
     <div className="App">
-      <h1>Tasty</h1>
-      <RecipeList />
+      <Navbar />
+      <Route exact path="/" component={RecipeList} />
     </div>
-  );
-}
+  </BrowserRouter>
+
+);
 
 export default App;
