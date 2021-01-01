@@ -11,7 +11,7 @@ A catalogue of recipes - An SPA built using React &amp; Redux.
 - npm
 - CSS
 - ES6
-- [Meals DB API](https://www.themealdb.com/api.php)
+- [Spoonacular API](https://spoonacular.com/food-api)
 
 ## Getting Started
 
