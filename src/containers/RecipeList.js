@@ -1,9 +1,7 @@
 import React from 'react';
-import dotenv from 'dotenv';
+import { Link } from 'react-router-dom';
 
 import Recipe from '../components/Recipe';
-
-dotenv.config();
 
 class RecipeList extends React.Component {
   constructor(props) {
@@ -30,7 +28,9 @@ class RecipeList extends React.Component {
     const recipeList = recipes.length ? (
       recipes.map(recipe => (
         <div key={recipe.id}>
-          <Recipe recipe={recipe} />
+          <Link to={`/${recipe.id}`}>
+            <Recipe recipe={recipe} />
+          </Link>
         </div>
       ))
     ) : (
