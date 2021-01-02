@@ -1,29 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 import Recipe from '../components/Recipe';
+import { searchRecipe } from '../actions/index';
 
 class RecipeList extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      recipes: [],
-    };
-  }
-
   async componentDidMount() {
     const apiKey = process.env.REACT_APP_API_KEY;
-    const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=pasta`)
+    const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=chicken`)
       .then(res => res.json())
       .catch(error => error);
-    this.setState({
-      recipes: response.results,
-    });
+    this.fetchRecipes(response.results);
+  }
+
+  fetchRecipes = recipes => {
+    const { handleRecipesSearch } = this.props;
+    handleRecipesSearch(recipes);
   }
 
   render() {
-    const { recipes } = this.state;
+    const { recipes } = this.props;
 
     const recipeList = recipes.length ? (
       recipes.map(recipe => (
@@ -45,4 +43,17 @@ class RecipeList extends React.Component {
   }
 }
 
-export default RecipeList;
+RecipeList.propTypes = {
+  handleRecipesSearch: PropTypes.func.isRequired,
+  recipes: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
+const mapStateToProps = state => ({ recipes: state.recipes });
+
+const mapDispatchToProps = dispatch => ({
+  handleRecipesSearch: recipes => {
+    dispatch(searchRecipe(recipes));
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(RecipeList);
