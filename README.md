@@ -1,6 +1,8 @@
 # Tasty
 
-A catalogue of recipes - An SPA built using React &amp; Redux.
+A catalogue of recipes - A Single Page Application which fetches data from [Spoonacular API](https://spoonacular.com/food-api) and stores it in the Redux store, then displays it on the website. The website has two pages using a unique route. The first page shows a list on Recipes and the second page shows information about a specific recipe.
+
+![chrome-capture](https://user-images.githubusercontent.com/44979953/103484854-2ac65f00-4df2-11eb-87f5-ab44aa9c00b9.gif)
 
 ## Built With
 
