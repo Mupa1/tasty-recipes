@@ -16,8 +16,17 @@ a {
   line-height: 2;
 }
 
+li {
+  list-style: none;
+  line-height: 2;
+}
+
 .outerBox {
   margin: 30px 10px;
+}
+
+h5 {
+  margin-top: 20px;
 }
 
 .detailsContainer {

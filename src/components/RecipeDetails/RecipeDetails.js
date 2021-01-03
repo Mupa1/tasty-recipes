@@ -33,25 +33,34 @@ class RecipeDetails extends React.Component {
         <h2>{recipe.title}</h2>
         <img src={recipe.image} alt={recipe.title} />
         <p className="m-0">
-          Servings:
-          {' '}
-          {recipe.servings}
+          <strong>
+            Servings:
+            {' '}
+            {recipe.servings}
+          </strong>
         </p>
         <p className="m-0">
-          Ready In
-          {' '}
-          {recipe.readyInMinutes}
-          {' '}
-          Minutes
+          <strong>
+            Ready In
+            {' '}
+            {recipe.readyInMinutes}
+            {' '}
+            Minutes
+          </strong>
         </p>
-        <a className="text-primary" href={recipe.spoonacularSourceUrl} target="blank">Jump to Ingredients & Instructions</a>
-        <p>
-          <strong>SUMMARY: </strong>
-          <Interweave content={recipe.summary} />
-        </p>
+        <h5><u>INGREDIENTS</u></h5>
+        <ul className="p-0">
+          {recipe.extendedIngredients.map(ingredients => (
+            <li className="p-0 m-0" key={ingredients}>{ingredients.originalString}</li>
+          ))}
+        </ul>
+        <h5><u>INSTRUCTIONS</u></h5>
+        <p><Interweave content={recipe.instructions} /></p>
+        <h5><u>SUMMARY</u></h5>
+        <p><Interweave content={recipe.summary} /></p>
       </div>
     ) : (
-      <div>Loading post...</div>
+      <div className="text-center">Loading post...</div>
     );
     return (
       <div className={styles.outerBox}>
