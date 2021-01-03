@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component renders correctly 1`] = `
+<header
+  className="bg-success text-center"
+>
+  <nav>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <h1
+        className="text-white"
+      >
+        Tasty Recipes
+      </h1>
+    </a>
+  </nav>
+</header>
+`;
