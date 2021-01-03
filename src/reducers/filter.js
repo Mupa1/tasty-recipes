@@ -1,6 +1,6 @@
 import { UPDATE_FILTER } from '../actions/index';
 
-const filterReducer = (state = 'Chicken', action) => {
+const filterReducer = (state = 'Beef', action) => {
   switch (action.type) {
     case UPDATE_FILTER:
       return action.payload;

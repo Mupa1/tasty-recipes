@@ -1,0 +1,30 @@
+h2 {
+  margin-top: 20px;
+}
+
+img {
+  max-width: 300px;
+}
+
+p {
+  line-height: 1.7;
+  color: #555;
+}
+
+a {
+  color: #555;
+  line-height: 2;
+}
+
+.outerBox {
+  margin: 30px 10px;
+}
+
+.detailsContainer {
+  max-width: 700px;
+  border: solid 1px #e8e8e8;
+  text-align: center;
+  margin: auto;
+  font-size: 16px;
+  padding: 10px;
+}

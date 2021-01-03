@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Interweave from 'interweave';
 
+import styles from './RecipeDetails.module.css';
+import apiKey from '../../api/apiKey';
+
 class RecipeDetails extends React.Component {
   constructor(props) {
     super(props);
@@ -13,9 +16,8 @@ class RecipeDetails extends React.Component {
 
   async componentDidMount() {
     const { match } = this.props;
-    const apiKey = process.env.REACT_APP_API_KEY;
     const id = match.params.recipe_id;
-    const response = await fetch(`https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=${apiKey}`)
+    const response = await fetch(`https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=${apiKey()}`)
       .then(res => res.json())
       .catch(error => error);
     this.setState({
@@ -27,29 +29,32 @@ class RecipeDetails extends React.Component {
     const { recipe } = this.state;
 
     const recipeDetails = recipe ? (
-      <div className="text-center">
+      <div className={styles.detailsContainer}>
         <h2>{recipe.title}</h2>
         <img src={recipe.image} alt={recipe.title} />
-        <p>
+        <p className="m-0">
           Servings:
           {' '}
           {recipe.servings}
         </p>
-        <p>
+        <p className="m-0">
           Ready In
           {' '}
           {recipe.readyInMinutes}
           {' '}
           Minutes
         </p>
-        <a href={recipe.spoonacularSourceUrl} target="blank">Jump to Ingredients & instructions</a>
-        <p><Interweave content={recipe.summary} /></p>
+        <a className="text-primary" href={recipe.spoonacularSourceUrl} target="blank">Jump to Ingredients & Instructions</a>
+        <p>
+          <strong>SUMMARY: </strong>
+          <Interweave content={recipe.summary} />
+        </p>
       </div>
     ) : (
       <div>Loading post...</div>
     );
     return (
-      <div>
+      <div className={styles.outerBox}>
         <h1>{recipeDetails}</h1>
       </div>
     );

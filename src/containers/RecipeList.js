@@ -3,25 +3,24 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import Recipe from '../components/Recipe';
+import Recipe from '../components/Recipe/Recipe';
 import { searchRecipe, updateFilter } from '../actions/index';
-import RecipeFilter from '../components/RecipeFilter';
+import RecipeFilter from '../components/RecipeFilter/RecipeFilter';
+import apiKey from '../api/apiKey';
 
 class RecipeList extends React.Component {
   async componentDidMount() {
-    const apiKey = process.env.REACT_APP_API_KEY;
     const { filter } = this.props;
-    const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${filter}`)
+    const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey()}&query=${filter}`)
       .then(res => res.json())
       .catch(error => error);
     this.fetchRecipes(response.results);
   }
 
   async componentDidUpdate(prevProps) {
-    const apiKey = process.env.REACT_APP_API_KEY;
     const { filter } = this.props;
     if (prevProps.filter !== filter) {
-      const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${filter}`)
+      const response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey()}&query=${filter}`)
         .then(res => res.json())
         .catch(error => error);
       this.fetchRecipes(response.results);
@@ -51,7 +50,9 @@ class RecipeList extends React.Component {
     return (
       <div className="text-center">
         <RecipeFilter updateFilter={handleFilter} filter={filter} />
-        {recipeList}
+        <div className="d-flex flex-wrap justify-content-center">
+          {recipeList}
+        </div>
       </div>
     );
   }

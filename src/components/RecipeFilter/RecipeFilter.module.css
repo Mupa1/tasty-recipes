@@ -1,0 +1,7 @@
+select {
+  border: solid 1px #e8e8e8;
+  width: 300px;
+  height: 30px;
+  margin: 40px auto 30px auto;
+  font-size: 18px;
+}
