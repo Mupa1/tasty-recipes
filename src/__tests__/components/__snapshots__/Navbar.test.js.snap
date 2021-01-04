@@ -1,10 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Navbar component renders correctly 1`] = `
+exports[`matches Navbar snapshot 1`] = `
 <header
   className="bg-success text-center"
 >
-  <nav>
+  <nav
+    data-testid="navbar"
+  >
     <a
       href="/"
       onClick={[Function]}

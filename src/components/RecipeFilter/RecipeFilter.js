@@ -17,7 +17,7 @@ const RecipeFilter = ({ updateFilter, filter }) => {
   };
 
   return (
-    <select onChange={handleFilterChange} name="category" defaultValue={filter}>
+    <select onChange={handleFilterChange} name="category" defaultValue={filter} data-testid="categories">
       {categories.map(category => (
         <option key={category}>{category}</option>
       ))}

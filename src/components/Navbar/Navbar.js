@@ -5,7 +5,7 @@ import './Navbar.module.css';
 
 const Navbar = () => (
   <header className="bg-success text-center">
-    <nav>
+    <nav data-testid="navbar">
       <BrowserRouter>
         <Link to="/">
           <h1 className="text-white">Tasty Recipes</h1>
