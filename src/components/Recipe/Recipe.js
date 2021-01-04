@@ -9,9 +9,9 @@ const Recipe = ({ recipe }) => {
   return (
     <div className={styles.recipeContainer}>
       <div className={styles.imgContainer}>
-        <img src={image} alt={title} />
+        <img data-testid="image" src={image} alt={title} />
       </div>
-      <h3>{title}</h3>
+      <h3 data-testid="title">{title}</h3>
     </div>
   );
 };
