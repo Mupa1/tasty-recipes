@@ -1,7 +1,6 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import renderer from 'react-test-renderer';
-import { BrowserRouter } from 'react-router-dom';
 
 import Recipe from '../../components/Recipe/Recipe';
 
@@ -14,7 +13,7 @@ const recipe = {
 
 describe('Recipe', () => {
   it('matches Recipe snapshot', () => {
-    const recipes = renderer.create(<BrowserRouter><Recipe recipe={recipe} /></BrowserRouter>);
+    const recipes = renderer.create(<Recipe recipe={recipe} />);
     const tree = recipes.toJSON();
     expect(tree).toMatchSnapshot();
   });
