@@ -4,6 +4,13 @@ A catalogue of recipes - A Single Page Application which fetches data from [Spoo
 
 ![chrome-capture](https://user-images.githubusercontent.com/44979953/103484854-2ac65f00-4df2-11eb-87f5-ab44aa9c00b9.gif)
 
+## Live Link
+
+[Live Link](https://tasty-yummy-recipes-app.netlify.app/)
+
+## Live Demo
+[Video Presentation]()
+
 ## Built With
 
 - React

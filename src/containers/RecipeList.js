@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, BrowserRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+// // import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
@@ -38,11 +39,9 @@ class RecipeList extends React.Component {
     const recipeList = recipes.length ? (
       recipes.map(recipe => (
         <div key={recipe.id}>
-          <BrowserRouter>
-            <Link to={`/${recipe.id}`}>
-              <Recipe recipe={recipe} />
-            </Link>
-          </BrowserRouter>
+          <Link to={`/${recipe.id}`}>
+            <Recipe recipe={recipe} />
+          </Link>
         </div>
       ))
     ) : (
