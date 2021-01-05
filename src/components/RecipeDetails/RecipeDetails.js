@@ -51,7 +51,7 @@ class RecipeDetails extends React.Component {
         <h5><u>INGREDIENTS</u></h5>
         <ul className="p-0">
           {recipe.extendedIngredients.map(ingredients => (
-            <li className="p-0 m-0" key={ingredients}>{ingredients.originalString}</li>
+            <li className="p-0 m-0" key={ingredients.id}>{ingredients.originalString}</li>
           ))}
         </ul>
         <h5><u>INSTRUCTIONS</u></h5>
