@@ -9,7 +9,7 @@ A catalogue of recipes - A Single Page Application which fetches data from [Spoo
 [Live Link](https://tasty-yummy-recipes-app.netlify.app/)
 
 ## Live Demo
-[Video Presentation](https://www.loom.com/share/a9f8916a2c254520b49f0b86e60d06a4)
+[Video Presentation](https://www.loom.com/share/4b3704d52cbd4a4ca953183b12509a70)
 
 ## Built With
 
@@ -36,7 +36,7 @@ To make changes open tasty folder in you favorite editor.
 
 ## Automated Test
 
- > No automated tests yet for this project.
+ > npm run test
 
 ## Author
 
