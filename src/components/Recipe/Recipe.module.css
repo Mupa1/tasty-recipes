@@ -1,0 +1,25 @@
+img {
+  width: 100%;
+  min-height: 100%;
+}
+
+.recipeContainer {
+  max-width: 300px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.recipeContainer:hover {
+  box-shadow: 0 10px 6px -6px #777;
+  max-width: 302px;
+}
+
+.imgContainer {
+  min-height: 207px;
+  max-width: 300px;
+}
+
+h3 {
+  font-size: 22px;
+  color: #555;
+}

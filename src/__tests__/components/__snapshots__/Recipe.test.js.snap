@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Recipe matches Recipe snapshot 1`] = `
+<div
+  className="recipeContainer"
+>
+  <div
+    className="imgContainer"
+  >
+    <img
+      alt="Sample Title"
+      data-testid="image"
+      src="sample.jpg"
+    />
+  </div>
+  <h3
+    data-testid="title"
+  >
+    Sample Title
+  </h3>
+</div>
+`;
