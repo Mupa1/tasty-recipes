@@ -1,6 +1,6 @@
 # Tasty
 
-A catalogue of recipes - A Single Page Application which fetches data from [Spoonacular API](https://spoonacular.com/food-api) and stores it in the Redux store, then displays it on the website. The website has two pages using a unique route. The first page shows a list on Recipes and the second page shows information about a specific recipe.
+A catalogue of recipes - A Single Page Application that fetches data from [Spoonacular API](https://spoonacular.com/food-api) and stores it in the Redux store, then displays it on the website. The website has two pages using a unique route. The first page shows a list of Recipes and the second page shows information about a specific recipe.
 
 ![chrome-capture](https://user-images.githubusercontent.com/44979953/103484854-2ac65f00-4df2-11eb-87f5-ab44aa9c00b9.gif)
 
@@ -26,11 +26,11 @@ A catalogue of recipes - A Single Page Application which fetches data from [Spoo
 
 To get a copy up and running follow these simple example steps:-
 - Clone `https://github.com/Mupa1/tasty.git` to your local machine.
-- Run `npm install` to install dependancies.
+- Run `npm install` to install dependencies.
 - Run `npm start` to view the app live on your browser.
 
-To make changes open tasty folder in you favorite editor.
-- Navigate to src folder to make any changes.
+To make changes open the tasty folder in your favorite editor.
+- Navigate to the src folder to make any changes.
 - Run `npm start` to preview changes live on your browser.
 - When you finish your changes, run `npm run build` to create the production files to the dist folder.
 
