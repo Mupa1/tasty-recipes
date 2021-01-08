@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+header {
+  height: 80px;
+  box-shadow: 0 10px 6px -6px #777;
+  font-family: 'Cookie', cursive;
+}
+
+h1 {
+  line-height: 80px;
+}

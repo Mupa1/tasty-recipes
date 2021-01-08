@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches RecipeFilter snapshot 1`] = `
+<select
+  data-testid="categories"
+  defaultValue="Pizza"
+  name="category"
+  onChange={[Function]}
+>
+  <option>
+    Chicken
+  </option>
+  <option>
+    Beef
+  </option>
+  <option>
+    Pizza
+  </option>
+  <option>
+    Pasta
+  </option>
+  <option>
+    Fish
+  </option>
+</select>
+`;

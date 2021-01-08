@@ -1,0 +1,11 @@
+select {
+  border: solid 1px #28a745;
+  width: 300px;
+  height: 30px;
+  margin: 40px auto 30px auto;
+  font-size: 18px;
+}
+
+select:focus {
+  outline-color: #28a745;
+}
